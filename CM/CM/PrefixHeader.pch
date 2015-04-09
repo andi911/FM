@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  CM
+//
+//  Created by liangyu on 15-4-3.
+//  Copyright (c) 2015年 cheng. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+   #import "Common.h"
+   #import <UIKit/UIKit.h>
+   #import <Foundation/Foundation.h>
+#endif

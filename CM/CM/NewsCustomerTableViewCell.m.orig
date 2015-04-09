@@ -1,0 +1,56 @@
+//
+//  NewsCustomerTableViewCell.m
+//  CM
+//
+//  Created by liangyu on 15-4-9.
+//  Copyright (c) 2015年 cheng. All rights reserved.
+//
+
+#import "NewsCustomerTableViewCell.h"
+
+@implementation NewsCustomerTableViewCell
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.headImage = [[UIImageView alloc]initWithFrame:CGRectMake(5, 2, CGRectGetHeight(self.frame), CGRectGetHeight(self.frame)-4)];
+        self.headImage.layer.cornerRadius = self.headImage.frame.size.width / 2;
+        self.headImage.clipsToBounds = YES;
+//        self.headImage.backgroundColor = [UIColor orangeColor];
+        [self addSubview:self.headImage];
+
+        self.text = [[UILabel alloc]initWithFrame:CGRectMake(5+CGRectGetHeight(self.frame)+3, 3, Screen_W-(5+CGRectGetHeight(self.frame)+3)-40, CGRectGetHeight(self.frame)/2-6)];
+        self.text.textAlignment = NSTextAlignmentLeft;
+        [self.text setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15.0f]];
+<<<<<<< HEAD
+        self.text.backgroundColor = [UIColor greenColor];
+=======
+//        self.text.backgroundColor = [UIColor greenColor];
+>>>>>>> a little change
+        [self addSubview:self.text];
+        
+        self.subtext = [[UILabel alloc]initWithFrame:CGRectMake(5+CGRectGetHeight(self.frame)+3, 3+CGRectGetHeight(self.frame)/2-6+3, Screen_W-(5+CGRectGetHeight(self.frame)+3)-40, CGRectGetHeight(self.frame)-self.text.frame.size.height-12)];
+        self.subtext.font = [UIFont systemFontOfSize:12.0f];
+        self.subtext.textAlignment = NSTextAlignmentLeft;
+//        self.subtext.backgroundColor = [UIColor yellowColor];
+        [self addSubview:self.subtext];
+        
+        self.time = [[UILabel alloc]initWithFrame:CGRectMake(Screen_W-40, 3,40, CGRectGetHeight(self.frame)/2-6)];
+        self.time.textAlignment = NSTextAlignmentLeft;
+//        self.time.backgroundColor = [UIColor blueColor];
+        [self addSubview:self.time];
+    }
+    return self;
+}
+
+- (void)awakeFromNib {
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end

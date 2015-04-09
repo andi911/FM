@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  CM
+
+  Created by liangyu on 15-4-7.
+  Copyright (c) 2015年 cheng. All rights reserved.
+*/
+"Message" = "消息";
+"Linkman" = "联系人";
+"Dynamic" = "动态";
+"Phone"    = "电话";
