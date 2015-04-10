@@ -66,7 +66,7 @@
 
 //使用push到新的页面
 - (void)pushNewViewController:(UIViewController *)newViewController {
-    [self.navigationController pushViewController:newViewController animated:YES];
+    [self.navigationController pushViewController:newViewController animated:NO];
 }
 
 /*
