@@ -28,6 +28,8 @@
 		D909F1B51AD60CAA004031F5 /* headImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D909F1B41AD60CAA004031F5 /* headImage.jpg */; };
 		D909F1B91AD60F2E004031F5 /* NewsCustomerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D909F1B81AD60F2E004031F5 /* NewsCustomerTableViewCell.m */; };
 		D9381CBE1AD6810B00CB1B2B /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9381CBD1AD6810B00CB1B2B /* ChatViewController.m */; };
+		D9381CC11AD76E2E00CB1B2B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9381CC01AD76E2E00CB1B2B /* RootViewController.m */; };
+		D9381CC41AD76E7F00CB1B2B /* RootTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9381CC31AD76E7F00CB1B2B /* RootTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,10 @@
 		D909F1B81AD60F2E004031F5 /* NewsCustomerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCustomerTableViewCell.m; sourceTree = "<group>"; };
 		D9381CBC1AD6810B00CB1B2B /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		D9381CBD1AD6810B00CB1B2B /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		D9381CBF1AD76E2E00CB1B2B /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D9381CC01AD76E2E00CB1B2B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D9381CC21AD76E7F00CB1B2B /* RootTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableView.h; sourceTree = "<group>"; };
+		D9381CC31AD76E7F00CB1B2B /* RootTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,10 @@
 				D909F1661AD3A2C5004031F5 /* RootTableViewController.m */,
 				D9381CBC1AD6810B00CB1B2B /* ChatViewController.h */,
 				D9381CBD1AD6810B00CB1B2B /* ChatViewController.m */,
+				D9381CBF1AD76E2E00CB1B2B /* RootViewController.h */,
+				D9381CC01AD76E2E00CB1B2B /* RootViewController.m */,
+				D9381CC21AD76E7F00CB1B2B /* RootTableView.h */,
+				D9381CC31AD76E7F00CB1B2B /* RootTableView.m */,
 			);
 			name = message;
 			sourceTree = "<group>";
@@ -382,6 +392,8 @@
 				D909F11F1ACE9C12004031F5 /* ViewController.m in Sources */,
 				D909F11C1ACE9C12004031F5 /* AppDelegate.m in Sources */,
 				D909F1461AD3710C004031F5 /* MessageViewController.m in Sources */,
+				D9381CC11AD76E2E00CB1B2B /* RootViewController.m in Sources */,
+				D9381CC41AD76E7F00CB1B2B /* RootTableView.m in Sources */,
 				D909F1631AD37932004031F5 /* CMtabViewController.m in Sources */,
 				D909F1191ACE9C12004031F5 /* main.m in Sources */,
 			);
