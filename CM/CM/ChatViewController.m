@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, Screen_W, self.view.frame.size.height)];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, Screen_W, self.view.frame.size.height - 44) style:UITableViewStylePlain];
+    self.tableView.separatorColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellEditingStyleNone;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
