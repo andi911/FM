@@ -16,14 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, Screen_W, self.view.frame.size.height - 44) style:UITableViewStylePlain];
-    self.tableView.separatorColor = [UIColor clearColor];
-    self.tableView.separatorStyle = UITableViewCellEditingStyleNone;
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, Screen_W, Screen_H -44) style:UITableViewStylePlain];
+    
+//    self.tableView.separatorColor = [UIColor clearColor];
+//    self.tableView.separatorStyle = UITableViewCellEditingStyleNone;
+    self.tableView.allowsSelection = NO;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"chat_bg_default.jpg"]];
     [self.view addSubview:self.tableView];
     // Do any additional setup after loading the view.
 }
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -31,7 +35,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

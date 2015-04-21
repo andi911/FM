@@ -30,6 +30,8 @@
 		D9381CBE1AD6810B00CB1B2B /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9381CBD1AD6810B00CB1B2B /* ChatViewController.m */; };
 		D9381CC11AD76E2E00CB1B2B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9381CC01AD76E2E00CB1B2B /* RootViewController.m */; };
 		D9381CC41AD76E7F00CB1B2B /* RootTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9381CC31AD76E7F00CB1B2B /* RootTableView.m */; };
+		D98EE3ED1AE5DF060009A6C4 /* chat_bg_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D98EE3EC1AE5DF060009A6C4 /* chat_bg_default.jpg */; };
+		D98EE3EF1AE5E06F0009A6C4 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D98EE3EE1AE5E06F0009A6C4 /* bg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		D9381CC01AD76E2E00CB1B2B /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		D9381CC21AD76E7F00CB1B2B /* RootTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableView.h; sourceTree = "<group>"; };
 		D9381CC31AD76E7F00CB1B2B /* RootTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableView.m; sourceTree = "<group>"; };
+		D98EE3EC1AE5DF060009A6C4 /* chat_bg_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chat_bg_default.jpg; sourceTree = "<group>"; };
+		D98EE3EE1AE5E06F0009A6C4 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 		D909F1571AD377F4004031F5 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				D98EE3EB1AE5DEE00009A6C4 /* chatTableview */,
 				D909F1B31AD60C86004031F5 /* customerCell */,
 				D909F1B21AD60C6A004031F5 /* tabBarItem */,
 			);
@@ -275,6 +280,15 @@
 				D909F1B81AD60F2E004031F5 /* NewsCustomerTableViewCell.m */,
 			);
 			name = customerCell;
+			sourceTree = "<group>";
+		};
+		D98EE3EB1AE5DEE00009A6C4 /* chatTableview */ = {
+			isa = PBXGroup;
+			children = (
+				D98EE3EC1AE5DF060009A6C4 /* chat_bg_default.jpg */,
+				D98EE3EE1AE5E06F0009A6C4 /* bg.jpg */,
+			);
+			name = chatTableview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D909F1221ACE9C12004031F5 /* Main.storyboard in Resources */,
+				D98EE3ED1AE5DF060009A6C4 /* chat_bg_default.jpg in Resources */,
 				D909F1B51AD60CAA004031F5 /* headImage.jpg in Resources */,
 				D909F1511AD3730A004031F5 /* Localizable.strings in Resources */,
 				D909F1271ACE9C12004031F5 /* LaunchScreen.xib in Resources */,
@@ -365,6 +380,7 @@
 				D909F15B1AD37829004031F5 /* 联系人@2x.png in Resources */,
 				D909F1591AD37821004031F5 /* 动态@2x.png in Resources */,
 				D909F15D1AD37833004031F5 /* 消息@2x.png in Resources */,
+				D98EE3EF1AE5E06F0009A6C4 /* bg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

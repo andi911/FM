@@ -9,6 +9,6 @@
 #define _CM_COMMON_H_
 #define CURRENT_SYS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 #define Screen_W ([UIScreen mainScreen].bounds.size.width)
-
+#define Screen_H ([UIScreen mainScreen].bounds.size.height)
 #endif
 
