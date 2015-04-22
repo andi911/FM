@@ -10,5 +10,9 @@
 #define CURRENT_SYS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 #define Screen_W ([UIScreen mainScreen].bounds.size.width)
 #define Screen_H ([UIScreen mainScreen].bounds.size.height)
+#define IconMarginX 5
+#define IconMarginY 5
+#define Icon_W 40
+#define Icon_H 40
 #endif
 

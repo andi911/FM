@@ -7,8 +7,10 @@
 //
 
 #import "ChatViewController.h"
-
-@interface ChatViewController ()
+#import "ChartMessage.h"
+@interface ChatViewController (){
+    NSMutableArray *chatRecord;
+}
 
 @end
 
@@ -25,9 +27,22 @@
     self.tableView.delegate = self;
     self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"chat_bg_default.jpg"]];
     [self.view addSubview:self.tableView];
+    [self loadBaseData];
     // Do any additional setup after loading the view.
 }
 
+- (void)loadBaseData {
+    chatRecord =[NSMutableArray array];
+    ChartMessage *message = [[ChartMessage alloc]init];
+    NSString *path=[[NSBundle mainBundle] pathForResource:@"messages" ofType:@"plist"];
+    NSArray *data=[NSArray arrayWithContentsOfFile:path];
+    for(NSDictionary *dict in data){
+        message.content = dict[@"content"];
+        message.icon = dict[@"icon"];
+        message.type = [dict[@"type"] intValue];
+        [chatRecord addObject:message];
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -35,7 +50,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return chatRecord.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
