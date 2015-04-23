@@ -7,41 +7,61 @@
 //
 
 #import "ChatViewController.h"
+#import "ChartCell.h"
 #import "ChartMessage.h"
-@interface ChatViewController (){
-    NSMutableArray *chatRecord;
-}
+
+@interface ChatViewController ()
+@property (nonatomic,strong) NSMutableArray *cellFrames;
 
 @end
+static NSString *const cellIdentifier=@"QQChart";
 
 @implementation ChatViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, Screen_W, Screen_H -44) style:UITableViewStylePlain];
+    self.title=@"QQ chat";
+    self.view.backgroundColor=[UIColor whiteColor];
     
-//    self.tableView.separatorColor = [UIColor clearColor];
-//    self.tableView.separatorStyle = UITableViewCellEditingStyleNone;
+    //add UItableView
+    self.tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-44) style:UITableViewStylePlain];
+    
+    [self.tableView registerClass:[ChartCell class] forCellReuseIdentifier:cellIdentifier];
+    self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     self.tableView.allowsSelection = NO;
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"chat_bg_default.jpg"]];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chat_bg_default.jpg"]];
+    self.tableView.dataSource=self;
+    self.tableView.delegate=self;
     [self.view addSubview:self.tableView];
-    [self loadBaseData];
-    // Do any additional setup after loading the view.
+    
+    //add keyBorad
+    
+//    self.keyBordView=[[KeyBordVIew alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-108, self.view.frame.size.width, 44)];
+//    self.keyBordView.delegate=self;
+//    [self.view addSubview:self.keyBordView];
+    //初始化数据
+    
+    [self initwithData];
 }
 
-- (void)loadBaseData {
-    chatRecord =[NSMutableArray array];
-    ChartMessage *message = [[ChartMessage alloc]init];
+
+-(void)initwithData
+{
+    
+    self.cellFrames=[NSMutableArray array];
+    
     NSString *path=[[NSBundle mainBundle] pathForResource:@"messages" ofType:@"plist"];
     NSArray *data=[NSArray arrayWithContentsOfFile:path];
+    
     for(NSDictionary *dict in data){
-        message.content = dict[@"content"];
-        message.icon = dict[@"icon"];
-        message.type = [dict[@"type"] intValue];
-        [chatRecord addObject:message];
+        
+        ChartCellFrame *cellFrame=[[ChartCellFrame alloc]init];
+        ChartMessage *chartMessage=[[ChartMessage alloc]init];
+        chartMessage.dict=dict;
+        cellFrame.chartMessage=chartMessage;
+        [self.cellFrames addObject:cellFrame];
     }
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -50,12 +70,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return chatRecord.count;
+    return self.cellFrames.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    ChartCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    //    cell.delegate=self;
+    cell.cellFrame=self.cellFrames[indexPath.row];
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.cellFrames[indexPath.row] cellHeight];
 }
 
 
