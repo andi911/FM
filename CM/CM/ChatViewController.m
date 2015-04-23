@@ -9,9 +9,11 @@
 #import "ChatViewController.h"
 #import "ChartCell.h"
 #import "ChartMessage.h"
-
-@interface ChatViewController ()
+#import "KeyBordVIew.h"
+@interface ChatViewController ()<KeyBordVIewDelegate>
 @property (nonatomic,strong) NSMutableArray *cellFrames;
+@property (nonatomic,strong) KeyBordVIew *keyBordView;
+
 
 @end
 static NSString *const cellIdentifier=@"QQChart";
@@ -36,9 +38,9 @@ static NSString *const cellIdentifier=@"QQChart";
     
     //add keyBorad
     
-//    self.keyBordView=[[KeyBordVIew alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-108, self.view.frame.size.width, 44)];
-//    self.keyBordView.delegate=self;
-//    [self.view addSubview:self.keyBordView];
+    self.keyBordView=[[KeyBordVIew alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-44, self.view.frame.size.width, 44)];
+    self.keyBordView.delegate=self;
+    [self.view addSubview:self.keyBordView];
     //初始化数据
     
     [self initwithData];

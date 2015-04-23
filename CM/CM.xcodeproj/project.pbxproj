@@ -52,6 +52,9 @@
 		D962DC421AE8930600A11201 /* icon01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D962DC311AE8930600A11201 /* icon01.jpg */; };
 		D962DC431AE8930600A11201 /* icon02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D962DC321AE8930600A11201 /* icon02.jpg */; };
 		D962DC441AE8930600A11201 /* toolbar_bottom_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D962DC331AE8930600A11201 /* toolbar_bottom_bar.png */; };
+		D962DC471AE89C8600A11201 /* KeyBordVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = D962DC461AE89C8600A11201 /* KeyBordVIew.m */; };
+		D962DC4D1AE89D1C00A11201 /* NSString+DocumentPath.m in Sources */ = {isa = PBXBuildFile; fileRef = D962DC4A1AE89D1C00A11201 /* NSString+DocumentPath.m */; };
+		D962DC4E1AE89D1C00A11201 /* UIImage+StrethImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D962DC4C1AE89D1C00A11201 /* UIImage+StrethImage.m */; };
 		D98EE3ED1AE5DF060009A6C4 /* chat_bg_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D98EE3EC1AE5DF060009A6C4 /* chat_bg_default.jpg */; };
 		D98EE3EF1AE5E06F0009A6C4 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D98EE3EE1AE5E06F0009A6C4 /* bg.jpg */; };
 		D9E641261AE7992F0047F169 /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9E641251AE7992F0047F169 /* messages.plist */; };
@@ -139,6 +142,12 @@
 		D962DC311AE8930600A11201 /* icon01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon01.jpg; sourceTree = "<group>"; };
 		D962DC321AE8930600A11201 /* icon02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon02.jpg; sourceTree = "<group>"; };
 		D962DC331AE8930600A11201 /* toolbar_bottom_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbar_bottom_bar.png; sourceTree = "<group>"; };
+		D962DC451AE89C8600A11201 /* KeyBordVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBordVIew.h; sourceTree = "<group>"; };
+		D962DC461AE89C8600A11201 /* KeyBordVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBordVIew.m; sourceTree = "<group>"; };
+		D962DC491AE89D1C00A11201 /* NSString+DocumentPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DocumentPath.h"; sourceTree = "<group>"; };
+		D962DC4A1AE89D1C00A11201 /* NSString+DocumentPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DocumentPath.m"; sourceTree = "<group>"; };
+		D962DC4B1AE89D1C00A11201 /* UIImage+StrethImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StrethImage.h"; sourceTree = "<group>"; };
+		D962DC4C1AE89D1C00A11201 /* UIImage+StrethImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StrethImage.m"; sourceTree = "<group>"; };
 		D98EE3EC1AE5DF060009A6C4 /* chat_bg_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chat_bg_default.jpg; sourceTree = "<group>"; };
 		D98EE3EE1AE5E06F0009A6C4 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		D9E641251AE7992F0047F169 /* messages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messages.plist; sourceTree = "<group>"; };
@@ -184,6 +193,7 @@
 		D909F1151ACE9C12004031F5 /* CM */ = {
 			isa = PBXGroup;
 			children = (
+				D962DC481AE89D1C00A11201 /* category */,
 				D9E641271AE79B3B0047F169 /* chatcell */,
 				D909F11A1ACE9C12004031F5 /* AppDelegate.h */,
 				D909F11B1ACE9C12004031F5 /* AppDelegate.m */,
@@ -354,6 +364,8 @@
 				D962DC201AE892F200A11201 /* messages.plist */,
 				D962DC1D1AE892D600A11201 /* ChartContentView.h */,
 				D962DC1E1AE892D600A11201 /* ChartContentView.m */,
+				D962DC451AE89C8600A11201 /* KeyBordVIew.h */,
+				D962DC461AE89C8600A11201 /* KeyBordVIew.m */,
 				D962DC1A1AE8922300A11201 /* ChartMessage.h */,
 				D962DC1B1AE8922300A11201 /* ChartMessage.m */,
 			);
@@ -383,6 +395,17 @@
 				D962DC331AE8930600A11201 /* toolbar_bottom_bar.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		D962DC481AE89D1C00A11201 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				D962DC491AE89D1C00A11201 /* NSString+DocumentPath.h */,
+				D962DC4A1AE89D1C00A11201 /* NSString+DocumentPath.m */,
+				D962DC4B1AE89D1C00A11201 /* UIImage+StrethImage.h */,
+				D962DC4C1AE89D1C00A11201 /* UIImage+StrethImage.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 		D98EE3EB1AE5DEE00009A6C4 /* chatTableview */ = {
@@ -527,10 +550,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D962DC471AE89C8600A11201 /* KeyBordVIew.m in Sources */,
 				D962DC171AE8914700A11201 /* ChartCell.m in Sources */,
 				D909F1B91AD60F2E004031F5 /* NewsCustomerTableViewCell.m in Sources */,
 				D909F16B1AD3A47A004031F5 /* News.m in Sources */,
 				D9381CBE1AD6810B00CB1B2B /* ChatViewController.m in Sources */,
+				D962DC4D1AE89D1C00A11201 /* NSString+DocumentPath.m in Sources */,
 				D909F14C1AD37185004031F5 /* DynamicViewController.m in Sources */,
 				D962DC1C1AE8922300A11201 /* ChartMessage.m in Sources */,
 				D909F1491AD3715B004031F5 /* LinkmanViewController.m in Sources */,
@@ -545,6 +570,7 @@
 				D9381CC41AD76E7F00CB1B2B /* RootTableView.m in Sources */,
 				D909F1631AD37932004031F5 /* CMtabViewController.m in Sources */,
 				D909F1191ACE9C12004031F5 /* main.m in Sources */,
+				D962DC4E1AE89D1C00A11201 /* UIImage+StrethImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
